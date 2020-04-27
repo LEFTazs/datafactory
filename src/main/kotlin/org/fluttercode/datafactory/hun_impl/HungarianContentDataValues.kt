@@ -1,4 +1,4 @@
-package org.fluttercode.datafactory.impl
+package org.fluttercode.datafactory.hun_impl
 
 import org.fluttercode.datafactory.ContentDataValues
 
@@ -24,7 +24,7 @@ import org.fluttercode.datafactory.ContentDataValues
  * along with DataFactory.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-class DefaultContentDataValues : ContentDataValues {
+class HungarianContentDataValues : ContentDataValues {
     override val words: Array<String>
         get() = Companion.words
 
@@ -61,14 +61,14 @@ class DefaultContentDataValues : ContentDataValues {
                 "so", "will", "from", "the", "web", "ending", "badly", "library",
                 "handled", "books", "constantly", "headphones", "of", "ill", "on",
                 "it's", "sill", "sits", "sofa")
-        private val businessTypes = arrayOf("Furnishings", "Bakery",
-                "Accounting", "Textiles", "Manufacturing", "Industries",
-                "Pro Services", "Landscaping", "Realty", "Travel",
-                "Medical supplies", "Office supplies", "Insurance", "Software",
-                "Motors", "Cafe", "Services", "Gymnasium", "Motor Services",
-                "Signs", "Development", "Studios", "Engineering", "Development")
+        private val businessTypes = arrayOf("Lakberendezés", "Pékség",
+                "Könyvelés", "Textil", "Gyártás", "Industries",
+                "Pro Services", "Kertészet", "Telek", "Utazás",
+                "Orvosi eszközök", "Irodaszerek", "Biztosítás", "Szoftver",
+                "Motors", "Kávézó", "Szolgáltatások", "Tornaterem", "Motoros szolgáltatások",
+                "Signs", "Fejlesztés", "Studió", "Engineering")
         private val emailHosts = arrayOf("gma1l", "hotma1l", "yah00",
                 "somema1l", "everyma1l", "ma1lbox", "b1zmail", "ma1l2u")
-        private val tlds = arrayOf("org", "net", "com", "biz", "us", "co.uk")
+        private val tlds = arrayOf("org", "net", "com", "biz", "us", "co.uk", "hu")
     }
 }

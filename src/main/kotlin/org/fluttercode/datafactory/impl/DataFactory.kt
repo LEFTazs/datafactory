@@ -35,16 +35,16 @@ import java.util.*
 /**
  * @author GIBSOA01
  */
-class DataFactory private constructor(random: Random) {
+open class DataFactory protected constructor(random: Random) {
     /**
      * Set this to provide your own list of name data values by passing it a class that implements the
      * [NameDataValues] interface which just returns the String arrays to use for the test data.
      *
      * @param nameDataValues Object holding the set of data values to use
      */
-    var nameDataValues: NameDataValues = DefaultNameDataValues()
-    private var addressDataValues: AddressDataValues = DefaultAddressDataValues()
-    private var contentDataValues: ContentDataValues = DefaultContentDataValues()
+    protected open var nameDataValues: NameDataValues = DefaultNameDataValues()
+    protected open var addressDataValues: AddressDataValues = DefaultAddressDataValues()
+    protected open var contentDataValues: ContentDataValues = DefaultContentDataValues()
     private var random = Random()
 
     /**
@@ -551,9 +551,9 @@ class DataFactory private constructor(random: Random) {
      *
      * @param addressDataValues Object holding the set of data values to use
      */
-    fun setAddressDataValues(addressDataValues: AddressDataValues) {
+    /*fun setAddressDataValues(addressDataValues: AddressDataValues) {
         this.addressDataValues = addressDataValues
-    }
+    }*/
 
     /**
      * Set this to provide your own list of content data values by passing it a class that implements the
@@ -561,9 +561,9 @@ class DataFactory private constructor(random: Random) {
      *
      * @param contentDataValues Object holding the set of data values to use
      */
-    fun setContentDataValues(contentDataValues: ContentDataValues) {
+    /*fun setContentDataValues(contentDataValues: ContentDataValues) {
         this.contentDataValues = contentDataValues
-    }
+    }*/
 
     companion object {
         // used for backwards compatibility

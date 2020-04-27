@@ -23,7 +23,8 @@ import org.fluttercode.datafactory.NameDataValues
  * You should have received a copy of the GNU Lesser General Public License
  * along with DataFactory.  If not, see <http://www.gnu.org/licenses/>.
  *
- */   class DefaultNameDataValues : NameDataValues {
+ */
+class DefaultNameDataValues : NameDataValues {
     override val firstNames: Array<String>
         get() = Companion.firstNames
 
