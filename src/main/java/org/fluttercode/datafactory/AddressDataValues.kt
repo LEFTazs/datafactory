@@ -1,4 +1,4 @@
-package org.fluttercode.datafactory;
+package org.fluttercode.datafactory
 
 /*
  * Copyright 2011, Andrew M Gibson
@@ -11,25 +11,31 @@ package org.fluttercode.datafactory;
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * DataFactory is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
- * 
- * 
+ *
+ *
  * You should have received a copy of the GNU Lesser General Public License
  * along with DataFactory.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+interface AddressDataValues {
+    /**
+     * @return Array of street address
+     */
+    val streetNames: Array<String>
 
-public interface ContentDataValues {
+    /**
+     * @return Array of cities
+     */
+    val cities: Array<String>
 
-	String[] getWords();
-
-	String[] getBusinessTypes();
-
-	String[] getEmailHosts();
-
-	String[] getTlds();
+    /**
+     * Returns a list of address suffixes such as "Lane", "Drive","Parkway"
+     * @return Array of address suffixes
+     */
+    val addressSuffixes: Array<String>
 }
