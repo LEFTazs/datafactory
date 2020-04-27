@@ -42,7 +42,7 @@ open class DataFactory protected constructor(random: Random) {
      *
      * @param nameDataValues Object holding the set of data values to use
      */
-    protected open var nameDataValues: NameDataValues = DefaultNameDataValues()
+    open var nameDataValues: NameDataValues = DefaultNameDataValues()
     protected open var addressDataValues: AddressDataValues = DefaultAddressDataValues()
     protected open var contentDataValues: ContentDataValues = DefaultContentDataValues()
     private var random = Random()
@@ -545,29 +545,9 @@ open class DataFactory protected constructor(random: Random) {
         random = Random(seed.toLong())
     }
 
-    /**
-     * Set this to provide your own list of address data values by passing it a class that implements the
-     * [AddressDataValues] interface which just returns the String arrays to use for the test data.
-     *
-     * @param addressDataValues Object holding the set of data values to use
-     */
-    /*fun setAddressDataValues(addressDataValues: AddressDataValues) {
-        this.addressDataValues = addressDataValues
-    }*/
-
-    /**
-     * Set this to provide your own list of content data values by passing it a class that implements the
-     * [ContentDataValues] interface which just returns the String arrays to use for the test data.
-     *
-     * @param contentDataValues Object holding the set of data values to use
-     */
-    /*fun setContentDataValues(contentDataValues: ContentDataValues) {
-        this.contentDataValues = contentDataValues
-    }*/
-
     companion object {
         // used for backwards compatibility
-        private val original_random = Random(93285)
+        val original_random = Random(93285)
 
         fun create(): DataFactory {
             return DataFactory()

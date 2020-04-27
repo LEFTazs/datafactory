@@ -4,12 +4,12 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
-class DataFactoryTextTest {
+open class DataFactoryTextTest {
     private lateinit var dataFactory: DataFactory
     private val ITERATION_COUNT = 100000
 
     @Before
-    fun initTest() {
+    open fun initTest() {
         dataFactory = DataFactory.create()
         dataFactory.randomize(73438)
     }
